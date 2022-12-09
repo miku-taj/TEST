@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  background-color: #fff6e9;
+}
+
+#main-nav {
+  padding-bottom: 10px;
+  background-color: rgb(255, 246, 233, 0.95);
+  box-shadow: 0 0 5px #bba78b;
+  z-index: 10;
+  transition: 400ms ease-in;
+}
+
+nav a {
+  transition: 400ms ease-in;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.Cormorant_SC {
+  font-family: "Cormorant SC", serif;
+  font-style: normal;
+}
+
+p {
+  font-family: "Raleway", sans-serif;
+}
+
+.css_underline::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 2px;
+  bottom: 0;
+  width: 100%;
+  background-color: grey;
+}
+
+button {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+#cheaper {
+  background-image: url(../images/sectionBg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.5s ease-in-out;
+  background-size: cover;
+}
+
+#sale {
+  transition: 0.5s ease-in-out;
+  background-image: url(../images/sectionBg2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ads-text {
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(30px);
+}
+
+.switchers {
+  border: #9da57c solid 1px;
+  width: 11px;
+  height: 11px;
+}
+
+.active {
+  transition: 300ms ease-in-out;
+  background-color: #9da57c;
+}
+
+.underlineN {
+  text-decoration: none;
+  position: relative;
+}
+
+.underlineN:after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  /* adjust this to move up and down. you may have to adjust the line height of the paragraph if you move it down a lot. */
+  bottom: 0px;
+
+  /****** 
+       optional values below 
+       ******/
+
+  /* center - (optional) use with adjusting width   */
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 0%;
+  background: green;
+
+  /* optional animation */
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* optional hover classes used with anmiation */
+.underlineN:hover:after {
+  width: 100%;
+  background: black;
+}
+
+.wrapper {
+  max-width: 1200px;
+}
+.wrapper button {
+  transition: transform 0.1s linear;
+}
+
+.carousel.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.carousel.dragging img {
+  pointer-events: none;
+}
+.carousel img {
+  height: 340px;
+  object-fit: cover;
+  user-select: none;
+  margin-left: 14px;
+  width: calc(100% / 3);
+}
+.carousel img:first-child {
+  margin-left: 0px;
+}
+
+@media screen and (max-width: 900px) {
+  .carousel img {
+    width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .carousel img {
+    width: 100%;
+  }
+}
+
+.switch-circle {
+  width: 10px;
+  height: 10px;
+  border: #9da57c solid 0.5px;
+  border-radius: 50%;
+}

@@ -1,18 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,300&family=Cormorant+SC&family=Raleway:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
-    <nav>
-      <a href="#">Hey</a>
-      <a href="">Hey</a>
-      <a href="">Hey</a>
-      <a href="">Heyo</a>
-      <a href="">Heyo</a>
-    </nav>
+    <header class="flex flex-col items-center h-fit">
+      <nav id="main-nav"
+        class="fixed pt-5 text-base content w-full  "
+      >
+      <div class="flex justify-between mx-auto items-center w-11/12">
+        <a href="#"><img src="./images/logo.svg" alt="LOGO" /></a>
+        <a class="font-light underlineN" href="#">О нас</a>
+        <a class="font-light underlineN" href="#">Прайс</a>
+        <a class="font-light underlineN" href="#">Отзывы</a>
+        <a class="font-light underlineN" href="#">Студии</a>
+        <a class="font-light underlineN" href="#">Блог</a>
+        <a class="font-light underlineN" href="tel:+7(812)6605088"
+          >+7 (812) 660-50-88</a
+        >
+        <button
+          class="uppercase border-2 py-2 px-3 border-black font-normal hover:bg-black hover:text-white"
+        >
+          <a href="#">записаться</a>
+        </button>
+      </div>
+      
+      </nav>
+      <div class="banner mt-24">
+        <div class="content w-11/12 mx-auto">
+          <div class="heading_banner">
+            <p class="text-base">XNAILS - студии маникюра в Санкт-Петербурге</p>
+            <h1 class="italic font-light text-6xl">
+              Мы знаем все о
+              <span class="Cormorant_SC">красивом</span>
+            </h1>
+          </div>
+          <div class="bottom-banner flex justify-between w-full">
+            <div class="left_banner w-1/2">
+              <h1 class="italic font-light text-5xl">
+                и <span class="Cormorant_SC">качественном</span>
+              </h1>
+              <h1 class="italic font-light text-5xl">покрытии</h1>
+              <div class="btns w-4/5 flex items-center gap-16 my-12">
+                <button
+                  class="uppercase border-2 py-2 px-3 border-black font-normal hover:bg-black hover:text-white"
+                >
+                  <a href="#">записаться</a>
+                </button>
+                <a class="underline" href="#">Узнать стоимость</a>
+              </div>
+              <div class="banner_images flex justify-center w-4/5 mt-4">
+                <img class="w-1/3 pr-1" src="./images/headerleft.png" alt="" />
+                <img
+                  class="w-1/3 px-1"
+                  src="./images/headerMiddle.png"
+                  alt=""
+                />
+                <img class="w-1/3 pl-1" src="./images/headerRight.png" alt="" />
+              </div>
+            </div>
+            <div class="main_banner_image w-2/5 mt-auto">
+              <img class="" src="./images/mainPhoto.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-24 w-11/12 mx-auto">
+        <div class="flex flex-wrap -m-4 justify-around text-center">
+          <div class="p-4 sm:w-1/4 w-1/2">
+            <h2
+              class="title-font font-medium sm:text-6xl text-7xl text-gray-900"
+            >
+              4
+            </h2>
+            <p class="leading-relaxed">года мы радуем наших клиентов</p>
+          </div>
+          <div class="p-4 sm:w-1/4 w-1/2">
+            <h2
+              class="title-font font-medium sm:text-6xl text-7xl text-gray-900"
+            >
+              10000+
+            </h2>
+            <p class="leading-relaxed">маникюров мы сделали за последний год</p>
+          </div>
+          <div class="p-4 sm:w-1/4 w-1/2">
+            <h2
+              class="title-font font-medium sm:text-6xl text-7xl text-gray-900"
+            >
+              3+
+            </h2>
+            <p class="leading-relaxed">наши мастера имеют опыт более 3 лет</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-10">
+      <div id="cheaper" class="animate__animated animate__fadeIn content w-11/12 mb-6 mx-auto hidden items-center justify-end ads">
+        <div class="w-1/3 h-64 my-10 p-8 mx-14 ads-text">
+          <h2 class="mt-5 text-3xl">Вместе дешевле!</h2>
+          <p class="my-2 h-2/3 font-light ">
+            Расскажите о нас своим подругам, знакомым, коллегам или
+            родственникам. Друг получает скидку 10% на первый визит, а вы - 10%
+            кэшбэк с его первого визита
+          </p>
+          <a href="#" class="font-light underline">Подробнее</a>
+        </div>
+      </div>
+      <div id="sale" class="animate__animated animate__fadeIn content w-11/12 mb-7 mx-auto flex items-center justify-end ads">
+        <div class="w-1/3 h-64 my-10 flex flex-col  justify-between p-8 mx-14 ads-text">
+          <h2 class="mt-5 text-5xl text-center text-white">Скидка 10% <br> на первый визит</h2>
+          <a href="#" class="font-light underline text-center text-white">Подробнее</a>
+        </div>
+      </div>
+      <div class="content w-5/6 mx-auto">
+        <div class="switcher flex gap-2 justify-center">
+          <div class="switchers switch-left active rounded-full" ></div>
+          <div class="switchers switch-right rounded-full"></div>
+        </div>
+      </div>
+
+      </div>
+    </section>
+
+    <section class="services my-12 w-5/6 mx-auto flex flex-col">
+      <h2 class="text-5xl text-center">Наши услуги</h2>
+      <div class="services-block w-fit pr-5">
+        <nav class="flex gap-20 mt-9">
+          <h4 class="inline-block font-normal text-3xl underlineN">
+            <button id="manicureBtn" class="pb-2">Маникюр</button>
+          </h4>
+          <h4 class="inline-block font-normal text-3xl underlineN">
+            <button id="growingBtn">Наращивание</button>
+          </h4>
+          <h4 class="inline-block font-normal text-3xl underlineN">
+            <button id="pedicureBtn">Педикюр</button>
+          </h4>
+          <h4 class="inline-block font-normal text-3xl underlineN">
+            <button id="browsBtn">Брови</button>
+          </h4>
+        </nav>
+
+        <div id="manicure" class="w-fit flex justify-between">
+          <div class="listik flex flex-col w-1/2">
+            <div class="spisok flex w-full justify-between">
+            <ul class="mt-7 w-fit mr-20">
+              <li class="mb-3">Снятие покрытия</li>
+              <li class="mb-3">Маникюр (аппаратный, комбинированный)</li>
+              <li class="mb-3">Покрытие гелем LUXIO, ONIQ</li>
+              <li class="mb-3">
+                Снятие + маникюр + Покрытие гелем LUXIO, ONIQ
+              </li>
+              <li class="mb-3">Дизайн ногтей</li>
+              <li class="mb-3">Укрепление акриловой пудрой</li>
+              <li class="mb-3">Укрепление гелем</li>
+              <li class="mb-3">Ремонт натурального ногтя</li>
+            </ul>
+
+            <ul class="w-fit mt-6 mr-1">
+              <li class="mb-3">200₽</li>
+              <li class="mb-3">1000₽</li>
+              <li class="mb-3">900₽</li>
+              <li class="mb-3">2100₽</li>
+              <li class="mb-3">20-300₽</li>
+              <li class="mb-3">300₽</li>
+              <li class="mb-3">500₽</li>
+              <li class="mb-3">100₽</li>
+            </ul>
+            
+          </div>
+          <button
+          class=" uppercase mx-auto mt-4 justify-self-end border-2 py-2 px-3 border-black font-normal hover:bg-black hover:text-white"
+        >
+          <a href="#">записаться</a>
+        </button>
+          </div>
+          
+          <div class="w-1/3 -mt-11 -mr-5">
+            <img class="" src="./images/services.png" alt="" />
+          </div>
+        </div>
+
+        <div id="growing" class="w-fit justify-between hidden">
+          <div class="listik flex flex-col w-1/2">
+            <div class="spisok flex w-full justify-between">
+            <ul class="mt-7 w-fit mr-20">
+              <li class="mb-3">Снятие наращенных ногтей</li>
+              <li class="mb-3">Ремонт ногтя гелем</li>
+              <li class="mb-3">Наращивание + маникюр + покрытие</li>
+              <li class="mb-3">Коррекция + маникюр + покрытие</li>
+              <li class="mb-3">Донаращивание сломанного ногтя</li>
+            </ul>
+
+            <ul class="w-fit mt-6 mr-1">
+              <li class="mb-3">400₽</li>
+              <li class="mb-3">200₽</li>
+              <li class="mb-3">3100₽</li>
+              <li class="mb-3">2700₽</li>
+              <li class="mb-3">200₽</li>
+            </ul>
+            </div>
+            <button
+          class=" uppercase mx-auto mt-4 justify-self-end border-2 py-2 px-3 border-black font-normal hover:bg-black hover:text-white"
+        >
+          <a href="#">записаться</a>
+        </button>
+          </div>
+          <div class="w-1/3 -mt-11 -mr-5">
+            <img class="" src="./images/growing.png" alt="" />
+          </div>
+        </div>
+
+                <div id="pedicure" class="w-fit justify-between hidden">
+          <div class="listik flex flex-col w-1/2">
+            <div class="spisok flex w-full justify-between">
+            <ul class="mt-7 w-fit mr-20">
+               <li class="mb-3">Снятие покрытия</li>
+              <li class="mb-3">Педикюр</li>
+              <li class="mb-3">Покрытие гелем LUXIO, ONIQ</li>
+              <li class="mb-3">Снятие + педикюр + покрытие</li>
+            </ul>
+
+            <ul class="w-fit mt-6 mr-1">
+                            <li class="mb-3">200 ₽</li>
+              <li class="mb-3">1400 ₽</li>
+              <li class="mb-3">900 ₽</li>
+              <li class="mb-3">2700 ₽</li>
+            </ul>
+          </div>
+            <button
+          class=" uppercase mx-auto mt-4 justify-self-end border-2 py-2 px-3 border-black font-normal hover:bg-black hover:text-white"
+        >
+          <a href="#">записаться</a>
+        </button>
+        </div>
+          <div class="w-1/3 -mt-11 -mr-5">
+            <img  src="./images/pedicure.png" alt="" />
+          </div>
+        </div>
+                        <div id="brows" class="w-fit justify-between hidden">
+          <div class="listik flex flex-col w-1/2">
+            <div class="spisok flex w-full justify-between">
+            <ul class="mt-7 w-fit mr-20">
+               <li class="mb-3">Коррекция бровей</li>
+              <li class="mb-3">Окрашивание бровей краской</li>
+              <li class="mb-3">Окрашивание бровей хной</li>
+              <li class="mb-3">Коррекция и окрашивание хной /краской</li>
+              <li class="mb-3">Моделирование + коррекция + окрашивание</li>
+              <li class="mb-3">Ламинирование + кореекция</li>
+              <li class="mb-3">Ламинирование + коррекция + окрашивание</li>
+            </ul>
+
+            <ul class="w-fit mt-6 mr-1">
+                            <li class="mb-3">600 ₽</li>
+              <li class="mb-3">900₽</li>
+              <li class="mb-3">900₽</li>
+              <li class="mb-3">1500₽</li>
+              <li class="mb-3">2000₽</li>
+              <li class="mb-3">2000₽</li>
+              <li class="mb-3">2300₽</li>
+            </ul>
+          </div>
+           <button
+          class=" uppercase mx-auto mt-4 justify-self-end border-2 py-2 px-3 border-black font-normal hover:bg-black hover:text-white"
+        >
+          <a href="#">записаться</a>
+        </button>
+        </div>
+          <div class="w-1/3 -mt-11 -mr-5">
+            <img class="" src="./images/brows.png" alt="" />
+          </div>
+        </div>
+        
+    </section>
+      <h2 class="text-5xl  my-12 mx-auto text-center mb-7">Портфолио</h2>
+      <div>
+        <img src="./images/" alt="">
+      </div>
+
+  <section class="portfolio flex px-0 py-5 mb-10 items-center justify-center">
+
+    <div class="wrapper cursor-pointer scroll-smooth flex w-11/12 relative">
+      <button id="left" class="hidden -left-12 active:scale-90 -translate-y-1/2 top-1/2 h-14 w-14 cursor-pointer absolute"><img class="h-14 w-14" src="./images/Vector 2.svg" alt=""></button>
+      <div class="carousel scroll-smooth cursor-pointer overflow-hidden flex w-full ">
+        <img class=" object-center object-cover select-none " src="./images/portfolio1.png" draggable="false"  alt="img"/>   <!--draggable="false"-->
+        <img class=" object-center object-cover select-none ml-5" src="./images/portfolio2.png" alt="img" draggable="false"/> <!--draggable="false"-->
+        <img class=" object-center object-cover select-none ml-5" src="./images/portfolio3.png" alt="img" draggable="false"/> <!--draggable="false"-->
+        <img class=" object-center object-cover select-none ml-5" src="./images/portfolio4.png" alt="img" draggable="false"/> <!--draggable="false"-->
+        <img class=" object-center object-cover select-none ml-5" src="./images/portfolio5.png" alt="img" draggable="false"/> <!--draggable="false"-->
+        <img class=" object-center object-cover select-none ml-5" src="./images/portfolio6.png" alt="img" draggable="false"/> <!--draggable="false"-->
+        <img class=" object-center object-cover select-none ml-5" src="./images/portfolio7.png" alt="img" draggable="false"/> <!--draggable="false"-->
+        <img class=" object-center object-cover select-none ml-5" src="./images/portfolio5.png" alt="img" draggable="false"/> <!--draggable="false"-->
+      </div>
+      <button id="right" class="-right-12 active:scale-90 -translate-y-1/2 top-1/2 h-14 w-14 cursor-pointer absolute"><img  class="h-14 w-14" src="./images/Vector 1.svg" alt=""></button>
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+        <!-- <div class="switch-circles flex justify-center gap-1 mt-4">
+          <div class="switch-circle"></div>
+          <div class="switch-circle"></div>
+          <div class="switch-circle"></div>
+          <div class="switch-circle"></div>
+          <div class="switch-circle"></div>
+        </div>-->
+
+    <section class="flex items-stretch w-11/12 justify-between mx-auto ">
+      <div class="w-1/2"><img class="mx-auto" src="./images/gift.png" alt=""></div>
+      <div class="flex flex-col justify-around w-2/5 mx-auto ml-8 ">
+        <div><h2 class="mb-10 text-5xl">Не знаете,<br> что подарить?</h2>
+<p>Подарочный сертификат  – это приятный сюрприз для Ваших близких и идеальный подарок коллеге, который обязательно порадует и подарит массу положительных эмоций!Вы можете оформить, как сертификат на бумажном носителе, так и в электронном виде.</p>
+ </div>
+             
+<div><button
+          class=" w-fit uppercase border-2 py-2 px-3 border-black font-normal hover:bg-black hover:text-white"
+        >
+          <a href="#">оформить</a>
+        </button><a class="underline text-slate-800 ml-10" href="#">Узнать стоимость</a></div>
+</div>
+    </section>
+    <section class="we-care w-11/12 mx-auto flex ">
+      <div class="title-we-care w-1/2"><h1 class="italic font-light text-5xl">
+              Мы
+              <span class="Cormorant_SC">заботимся</span><br> о наших
+              <span class="Cormorant_SC">клиентах</span>
+            </h1>
+          <h1 class="italic self-end font-light text-5xl">
+              И они это
+              <span class="Cormorant_SC">ценят</span>
+            </h1></div>
+            <img class=" w-1/4" src="./images/we_care (1).png" alt="">    
+    </section>
+    <script src="./apps/app.js"></script>
   </body>
 </html>
