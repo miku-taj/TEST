@@ -135,18 +135,30 @@ button {
   cursor: grab;
   scroll-behavior: auto;
 }
-.carousel.dragging img {
+.carousel.dragging div {
   pointer-events: none;
 }
 .carousel img {
+  border-radius: 10%;
   height: 340px;
-  object-fit: cover;
+  width: 100%;
   user-select: none;
-  margin-left: 14px;
-  width: calc(100% / 3);
+  transition: 300ms ease-in-out;
 }
-.carousel img:first-child {
-  margin-left: 0px;
+
+.carousel div {
+  flex-shrink: 0;
+  height: 340px;
+  width: 25%;
+  padding-left: 14px;
+}
+
+.carousel div:hover img {
+  border-radius: 20%;
+  height: 50%;
+}
+.carousel div:first-child {
+  padding-left: 0px;
 }
 
 @media screen and (max-width: 900px) {
