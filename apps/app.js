@@ -137,7 +137,7 @@ const autoSlide = () => {
     return;
 
   positionDiff = Math.abs(positionDiff);
-  let firstImgWidth = firstImg.clientWidth + 14;
+  let firstImgWidth = firstImg.clientWidth;
   let valDifference = firstImgWidth - positionDiff;
 
   if (carousel.scrollLeft > prevScrollLeft) {
@@ -174,7 +174,6 @@ const dragStop = () => {
 };
 
 carousel.addEventListener("mousedown", dragStart);
-carousel.addEventListener("touchstart", dragStart);
 
 document.addEventListener("mousemove", dragging);
 carousel.addEventListener("touchmove", dragging);
