@@ -140,10 +140,6 @@ const autoSlide = () => {
   let firstImgWidth = firstImg.clientWidth;
   let valDifference = firstImgWidth - positionDiff;
 
-  if (carousel.scrollLeft > prevScrollLeft) {
-    return (carousel.scrollLeft +=
-      positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff);
-  }
   carousel.scrollLeft -=
     positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
 };
@@ -180,3 +176,82 @@ carousel.addEventListener("touchmove", dragging);
 
 document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("touchend", dragStop);
+
+//comments
+
+const carouselCom = document.querySelector(".comment-carousel"),
+  firstCom = carouselCom.querySelectorAll("div")[0],
+  arrowIconsCom = document.querySelectorAll(".comment-wrapper button");
+
+let isDragStartCom = false,
+  isDraggingCom = false,
+  prevPageXCom,
+  prevScrollLeftCom,
+  positionDiffCom;
+
+const showHideIconsCom = () => {
+  let scrollWidth = carouselCom.scrollWidth - carouselCom.clientWidth; // getting max scrollable width
+  arrowIconsCom[0].style.display =
+    carouselCom.scrollLeft == 0 ? "none" : "block";
+  arrowIconsCom[1].style.display =
+    carouselCom.scrollLeft == scrollWidth ? "none" : "block";
+};
+
+arrowIconsCom.forEach((icon) => {
+  icon.addEventListener("click", () => {
+    let firstComWidth = firstCom.clientWidth;
+    carouselCom.scrollLeft +=
+      icon.id == "left" ? -firstComWidth : firstComWidth;
+    setTimeout(() => showHideIconsCom(), 60);
+  });
+});
+
+const autoSlideCom = () => {
+  if (
+    carouselCom.scrollLeft -
+      (carouselCom.scrollWidth - carouselCom.clientWidth) >
+      -1 ||
+    carouselCom.scrollLeft <= 0
+  )
+    return;
+
+  positionDiffCom = Math.abs(positionDiffCom);
+  let firstComWidth = firstCom.clientWidth;
+  let valDifference = firstComWidth - positionDiffCom;
+
+  carouselCom.scrollLeft -=
+    positionDiffCom > firstComWidth / 3 ? valDifference : -positionDiffCom;
+};
+
+const dragStartCom = (e) => {
+  isDragStartCom = true;
+  prevPageXCom = e.pageX || e.touches[0].pageX;
+  prevScrollLeftCom = carouselCom.scrollLeft;
+};
+
+const draggingCom = (e) => {
+  if (!isDragStartCom) return;
+  e.preventDefault();
+  isDraggingCom = true;
+  carouselCom.classList.add("dragging");
+  positionDiffCom = (e.pageX || e.touches[0].pageX) - prevPageXCom;
+  carouselCom.scrollLeft = prevScrollLeftCom - positionDiffCom;
+  showHideIconsCom();
+};
+
+const dragStopCom = () => {
+  isDragStartCom = false;
+  carouselCom.classList.remove("dragging");
+
+  if (!isDraggingCom) return;
+  isDraggingCom = false;
+  autoSlide();
+};
+
+carouselCom.addEventListener("mousedown", dragStartCom);
+
+document.addEventListener("mousemove", draggingCom);
+carouselCom.addEventListener("touchmove", draggingCom);
+
+document.addEventListener("mouseup", dragStopCom);
+carouselCom.addEventListener("touchend", dragStopCom);
