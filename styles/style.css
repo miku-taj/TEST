@@ -5,7 +5,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Raleway", sans-serif;
-  background-color: #fff6e9;
+  background-color: rgb(255, 246, 233);
 }
 
 #main-nav {
@@ -162,13 +162,13 @@ button {
 }
 
 @media screen and (max-width: 900px) {
-  .carousel img {
+  .carousel div {
     width: calc(100% / 2);
   }
 }
 
 @media screen and (max-width: 550px) {
-  .carousel img {
+  .carousel div {
     width: 100%;
   }
 }
@@ -208,7 +208,21 @@ button {
   width: 100%;
   padding-left: 14px;
 }
+.comment-text {
+  height: 120px;
+}
 
-.comment-carousel div:first-child {
-  padding-left: 0px;
+.comment-text::after {
+  content: "";
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40%;
+  height: 1.5em;
+  background: linear-gradient(
+    to right,
+    rgba(255, 246, 233, 0),
+    rgba(255, 246, 233, 1) 80%
+  );
 }
