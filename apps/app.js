@@ -190,7 +190,7 @@ let isDragStartCom = false,
   positionDiffCom;
 
 const showHideIconsCom = () => {
-  let scrollWidth = carouselCom.scrollWidth - carouselCom.clientWidth; // getting max scrollable width
+  let scrollWidth = carouselCom.scrollWidth - carouselCom.clientWidth;
   arrowIconsCom[0].style.display =
     carouselCom.scrollLeft == 0 ? "none" : "block";
   arrowIconsCom[1].style.display =
@@ -203,6 +203,7 @@ arrowIconsCom.forEach((icon) => {
     carouselCom.scrollLeft +=
       icon.id == "left" ? -firstComWidth : firstComWidth;
     setTimeout(() => showHideIconsCom(), 60);
+    showHideIconsCom();
   });
 });
 

@@ -226,3 +226,6 @@ button {
     rgba(255, 246, 233, 1) 80%
   );
 }
+.studio-description {
+  height: 400px;
+}
