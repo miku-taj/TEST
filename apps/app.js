@@ -256,3 +256,34 @@ carouselCom.addEventListener("touchmove", draggingCom);
 
 document.addEventListener("mouseup", dragStopCom);
 carouselCom.addEventListener("touchend", dragStopCom);
+
+//places block
+const centerBtn = document.querySelector("#centerBtn");
+const petrogradBtn = document.querySelector("#petrogradBtn");
+const center = document.querySelector("#center");
+const petrograd = document.querySelector("#petrograd");
+
+centerBtn.addEventListener("click", () => {
+  if (center.classList.contains("flex")) {
+    return;
+  } else {
+    center.classList.toggle("flex");
+    center.classList.toggle("hidden");
+    petrograd.classList.toggle("flex");
+    petrograd.classList.toggle("hidden");
+    centerBtn.classList.add("underLine-active");
+    petrogradBtn.classList.remove("underLine-active");
+  }
+});
+petrogradBtn.addEventListener("click", () => {
+  if (petrograd.classList.contains("flex")) {
+    return;
+  } else {
+    center.classList.toggle("flex");
+    center.classList.toggle("hidden");
+    petrograd.classList.toggle("flex");
+    petrograd.classList.toggle("hidden");
+    centerBtn.classList.remove("underLine-active");
+    petrogradBtn.classList.add("underLine-active");
+  }
+});
