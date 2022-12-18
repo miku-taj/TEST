@@ -2,17 +2,13 @@
   box-sizing: border-box;
 }
 body {
-  padding: 0;
-  margin: 0;
   font-family: "Raleway", sans-serif;
   background-color: rgb(255, 246, 233);
 }
 
 #main-nav {
-  padding-bottom: 10px;
-  background-color: rgb(255, 246, 233, 0.95);
+  background-color: rgb(255, 246, 233);
   box-shadow: 0 0 5px #bba78b;
-  z-index: 10;
   transition: 400ms ease-in;
 }
 
@@ -34,8 +30,34 @@ h6 {
   font-style: normal;
 }
 
-p {
+p,
+a {
   font-family: "Raleway", sans-serif;
+}
+.menu-span {
+  left: 0;
+}
+
+.menu-span::before {
+  content: "";
+  background-color: black;
+  height: 6px;
+  border-radius: 6px;
+  position: absolute;
+  width: 100%;
+  top: -14px;
+  transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu-span::after {
+  content: "";
+  background-color: black;
+  height: 6px;
+  border-radius: 6px;
+  position: absolute;
+  width: 100%;
+  bottom: -14px;
+  transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .css_underline::after {
@@ -59,12 +81,12 @@ button {
   background-image: url(../images/sectionBg.png);
   background-position: center;
   background-repeat: no-repeat;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
   background-size: cover;
 }
 
 #sale {
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
   background-image: url(../images/sectionBg2.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -117,16 +139,13 @@ button {
   position: absolute;
   content: "";
   height: 1px;
-  /* adjust this to move up and down. you may have to adjust the line height of the paragraph if you move it down a lot. */
   bottom: 0px;
-  /* center - (optional) use with adjusting width   */
   margin: 0 auto;
   left: 0;
   right: 0;
   width: 100%;
   background: green;
 
-  /* optional animation */
   -o-transition: 0.5s;
   -ms-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -134,15 +153,11 @@ button {
   transition: 0.5s;
 }
 
-/* optional hover classes used with anmiation */
 .underLine:hover:after {
   width: 100%;
   background: black;
 }
 
-.wrapper {
-  max-width: 1200px;
-}
 .wrapper button {
   transition: transform 0.1s linear;
 }
@@ -157,7 +172,6 @@ button {
 .carousel img {
   border-radius: 10%;
   height: 340px;
-  width: 100%;
   user-select: none;
   transition: 300ms ease-in-out;
 }
@@ -165,16 +179,13 @@ button {
 .carousel div {
   flex-shrink: 0;
   height: 340px;
-  width: 25%;
-  padding-left: 14px;
+  padding-left: 7px;
+  padding-right: 7px;
 }
 
 .carousel div:hover img {
   border-radius: 20%;
   height: 50%;
-}
-.carousel div:first-child {
-  padding-left: 0px;
 }
 
 @media screen and (max-width: 900px) {

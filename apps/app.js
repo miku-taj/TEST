@@ -1,6 +1,25 @@
+//responsiveness
+const mainNav = document.querySelector("#main-nav");
+
+//let width = screen.width;
+//if (width >= 900) {
+//  mainNav.innerHTML = `
+//  <div class="flex justify-between mx-auto items-center w-11/12">
+//        <a href="#"><img src="./images/logo.svg" alt="LOGO" /></a>
+//        <a class="font-light underLine" href="#">О нас</a>
+//        <a class="font-light underLine" href="#">Прайс</a>
+//        <a class="font-light underLine" href="#">Отзывы</a>
+//        <a class="font-light underLine" href="#">Студии</a>
+//        <a class="font-light underLine" href="#">Блог</a>
+//        <a class="font-light underLine" href="tel:+7(812)6605088">+7 (812) 660-50-88</a>
+//        <button class="uppercase border-2 py-2 px-3 border-black font-normal hover:bg-black hover:text-white">
+//          <a href="#">записаться</a>
+//        </button>
+//      </div>`;
+//}
+
 //Main nav
 let theEnd = 0;
-const mainNav = document.querySelector("#main-nav");
 
 window.addEventListener("scroll", () => {
   let scrollTop = window.pageXOffset || document.documentElement.scrollTop;
@@ -15,15 +34,25 @@ window.addEventListener("scroll", () => {
 //changing banner
 
 const saleBanner = document.querySelector("#sale");
+const saleDiv = document.querySelector(".sale");
+const saleText = document.querySelectorAll(".sale-text");
 const cheaperBanner = document.querySelector("#cheaper");
+const cheaperDiv = document.querySelector(".cheaper");
+const cheaperText = document.querySelectorAll(".cheaper-text");
 const swicthLeft = document.querySelector(".switch-left");
 const swicthRight = document.querySelector(".switch-right");
 
 function changeBanner() {
-  saleBanner.classList.toggle("flex");
-  cheaperBanner.classList.toggle("flex");
-  cheaperBanner.classList.toggle("hidden");
-  saleBanner.classList.toggle("hidden");
+  saleText.forEach((el) => el.classList.toggle("hidden"));
+  cheaperText.forEach((el) => el.classList.toggle("hidden"));
+  saleBanner.classList.toggle("w-0");
+  cheaperBanner.classList.toggle("w-full");
+  cheaperBanner.classList.toggle("w-0");
+  saleBanner.classList.toggle("w-full");
+  cheaperDiv.classList.toggle("w-1/3");
+  cheaperDiv.classList.toggle("w-0");
+  saleDiv.classList.toggle("w-0");
+  saleDiv.classList.toggle("w-1/3");
   swicthLeft.classList.toggle("active");
   swicthRight.classList.toggle("active");
 }
@@ -105,7 +134,7 @@ browsBtn.addEventListener("click", () => {
 
 //portfolio
 const carousel = document.querySelector(".carousel"),
-  firstImg = carousel.querySelectorAll("img")[0],
+  firstImg = carousel.querySelectorAll("div")[0],
   arrowIcons = document.querySelectorAll(".wrapper button");
 
 let isDragStart = false,
@@ -124,6 +153,7 @@ const showHideIcons = () => {
 arrowIcons.forEach((icon) => {
   icon.addEventListener("click", () => {
     let firstImgWidth = firstImg.clientWidth;
+    console.log(firstImgWidth);
     carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
     setTimeout(() => showHideIcons(), 60);
   });
