@@ -1,30 +1,62 @@
-//responsiveness
-const mainNav = document.querySelector("#main-nav");
-
-//let width = screen.width;
-//if (width >= 900) {
-//  mainNav.innerHTML = `
-//  <div class="flex justify-between mx-auto items-center w-11/12">
-//        <a href="#"><img src="./images/logo.svg" alt="LOGO" /></a>
-//        <a class="font-light underLine" href="#">О нас</a>
-//        <a class="font-light underLine" href="#">Прайс</a>
-//        <a class="font-light underLine" href="#">Отзывы</a>
-//        <a class="font-light underLine" href="#">Студии</a>
-//        <a class="font-light underLine" href="#">Блог</a>
-//        <a class="font-light underLine" href="tel:+7(812)6605088">+7 (812) 660-50-88</a>
-//        <button class="uppercase border-2 py-2 px-3 border-black font-normal hover:bg-black hover:text-white">
-//          <a href="#">записаться</a>
-//        </button>
-//      </div>`;
-//}
-
 //Main nav
 let theEnd = 0;
+const mainNav = document.querySelector("#main-nav");
+
+if (window.innerWidth < 900) {
+  mainNav.innerHTML = `<div class="nav py-3 z-50 relative flex w-11/12 justify-center mx-auto items-center">
+          <button class="menu-icon cursor-pointer absolute left-0 w-10 h-8">
+            <div class="relative bg-black h-1.5 w-10 rounded-md"></div>
+          </button>
+          <a href="#"><img src="./images/logo.svg" alt="LOGO" /></a>
+          <button class="uppercase absolute right-0 border-2 py-2 px-3 border-black font-normal hover:bg-black hover:text-white">
+            <a href="#">записаться</a>
+          </button>
+        </div>
+        
+        <ul class="menu-links absolute pt-4 z-10 bg-inherit w-full">
+          <li class="w-full"><a class="block w-11/12 mx-auto leading-10 font-light" href="#">О нас</a></li>
+          <li class="w-full"><a class="block w-11/12 mx-auto leading-10 font-light" href="#">Прайс</a></li>
+          <li class="w-full"><a class="block w-11/12 mx-auto leading-10 font-light" href="#">Отзывы</a></li>
+          <li class="w-full"><a class="block w-11/12 mx-auto leading-10 font-light" href="#">Студии</a></li>
+          <li class="w-full"><a class="block w-11/12 mx-auto leading-10 font-light" href="#">Блог</a></li>
+          <li class="w-full"><a class="block w-11/12 mx-auto leading-10 font-light" href="tel:+7(812)6605088">+7 (812) 660-50-88</a></li>          
+        </ul>`;
+  const menuIcon = document.querySelector(".menu-icon");
+  const menuLinks = document.querySelector(".menu-links");
+  menuIcon.addEventListener("click", () => {
+    menuIcon.classList.toggle("activated");
+    if (menuIcon.classList.contains("activated")) {
+      menuLinks.style.top = "50px";
+    } else {
+      menuLinks.style.top = "-1000px";
+    }
+    setTimeout(() => {
+      menuLinks.classList.toggle("shadow-md");
+    }, "500");
+  });
+} else {
+  mainNav.innerHTML = `        <div class="flex py-3 justify-between mx-auto items-center w-11/12">
+        <a href="#"><img src="./images/logo.svg" alt="LOGO" /></a>
+        <a class="font-light underLine" href="#">О нас</a>
+        <a class="font-light underLine" href="#">Прайс</a>
+        <a class="font-light underLine" href="#">Отзывы</a>
+        <a class="font-light underLine" href="#">Студии</a>
+        <a class="font-light underLine" href="#">Блог</a>
+        <a class="font-light underLine" href="tel:+7(812)6605088"
+          >+7 (812) 660-50-88</a
+        >
+        <button
+          class="uppercase border-2 py-2 px-3 border-black font-normal hover:bg-black hover:text-white"
+        >
+          <a href="#">записаться</a>
+        </button>
+      </div>`;
+}
 
 window.addEventListener("scroll", () => {
   let scrollTop = window.pageXOffset || document.documentElement.scrollTop;
   if (scrollTop > theEnd) {
-    mainNav.style.transform = "translateY(-110%)";
+    mainNav.style.transform = "translateY(-100%)";
   } else {
     mainNav.style.transform = "translateY(0px)";
   }
@@ -34,25 +66,15 @@ window.addEventListener("scroll", () => {
 //changing banner
 
 const saleBanner = document.querySelector("#sale");
-const saleDiv = document.querySelector(".sale");
-const saleText = document.querySelectorAll(".sale-text");
 const cheaperBanner = document.querySelector("#cheaper");
-const cheaperDiv = document.querySelector(".cheaper");
-const cheaperText = document.querySelectorAll(".cheaper-text");
 const swicthLeft = document.querySelector(".switch-left");
 const swicthRight = document.querySelector(".switch-right");
 
 function changeBanner() {
-  saleText.forEach((el) => el.classList.toggle("hidden"));
-  cheaperText.forEach((el) => el.classList.toggle("hidden"));
-  saleBanner.classList.toggle("w-0");
-  cheaperBanner.classList.toggle("w-full");
-  cheaperBanner.classList.toggle("w-0");
-  saleBanner.classList.toggle("w-full");
-  cheaperDiv.classList.toggle("w-1/3");
-  cheaperDiv.classList.toggle("w-0");
-  saleDiv.classList.toggle("w-0");
-  saleDiv.classList.toggle("w-1/3");
+  saleBanner.classList.toggle("flex");
+  cheaperBanner.classList.toggle("flex");
+  cheaperBanner.classList.toggle("hidden");
+  saleBanner.classList.toggle("hidden");
   swicthLeft.classList.toggle("active");
   swicthRight.classList.toggle("active");
 }
@@ -134,7 +156,7 @@ browsBtn.addEventListener("click", () => {
 
 //portfolio
 const carousel = document.querySelector(".carousel"),
-  firstImg = carousel.querySelectorAll("div")[0],
+  firstImg = carousel.querySelectorAll("img")[0],
   arrowIcons = document.querySelectorAll(".wrapper button");
 
 let isDragStart = false,
@@ -153,7 +175,6 @@ const showHideIcons = () => {
 arrowIcons.forEach((icon) => {
   icon.addEventListener("click", () => {
     let firstImgWidth = firstImg.clientWidth;
-    console.log(firstImgWidth);
     carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
     setTimeout(() => showHideIcons(), 60);
   });
