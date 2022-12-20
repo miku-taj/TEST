@@ -123,6 +123,12 @@ button {
   backdrop-filter: blur(30px);
 }
 
+@media screen and (max-width: 639px) {
+  .ads-text {
+    backdrop-filter: none;
+  }
+}
+
 .switchers {
   border: #9da57c solid 1px;
   width: 11px;

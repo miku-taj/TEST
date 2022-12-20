@@ -1,17 +1,20 @@
 module.exports = {
   theme: {
     screens: {
-      sm: "400px",
-      // => @media (min-width: 400px) { ... }
+      "2xl": { max: "1535px" },
+      // => @media (max-width: 1535px) { ... }
 
-      md: "700px",
-      // => @media (min-width: 700px) { ... }
+      xl: { max: "1279px" },
+      // => @media (max-width: 1279px) { ... }
 
-      lg: "1024px",
-      // => @media (min-width: 1024px) { ... }
+      lg: { max: "1023px" },
+      // => @media (max-width: 1023px) { ... }
 
-      xl: "1536px",
-      // => @media (min-width: 1536px) { ... }
+      md: { max: "767px" },
+      // => @media (max-width: 767px) { ... }
+
+      sm: { max: "639px" },
+      // => @media (max-width: 639px) { ... }
     },
   },
   content: ["./src/**/*.{html,js}"],
