@@ -18,45 +18,7 @@
   </head>
   <body>
     <header class="flex flex-col items-center h-fit">
-      <nav id="main-nav" class="fixed shadow-md text-base content w-full">
-        <div class="flex py-3 justify-between mx-auto items-center w-11/12">
-        <a href="#"><img src="./images/logo.svg" alt="LOGO" /></a>
-        <a class="font-light underLine" href="#">О нас</a>
-        <a class="font-light underLine" href="#">Прайс</a>
-        <a class="font-light underLine" href="#">Отзывы</a>
-        <a class="font-light underLine" href="#">Студии</a>
-        <a class="font-light underLine" href="#">Блог</a>
-        <a class="font-light underLine" href="tel:+7(812)6605088"
-          >+7 (812) 660-50-88</a
-        >
-        <button
-          class="uppercase border-2 py-2 px-3 border-black font-normal hover:bg-black hover:text-white"
-        >
-          <a href="#">записаться</a>
-        </button>
-      </div>
-      </nav>
-
-    <!--<nav id="main-nav" class="shadow-md fixed text-base content w-full">
-        <div class="nav py-3 z-50 relative flex w-11/12 justify-center mx-auto items-center">
-          <button class="menu-icon cursor-pointer absolute left-0 w-10 h-8">
-            <div class="relative bg-black h-1.5 w-10 rounded-md"></div>
-          </button>
-          <a href="#"><img src="./images/logo.svg" alt="LOGO" /></a>
-          <button class="uppercase absolute right-0 border-2 py-2 px-3 border-black font-normal hover:bg-black hover:text-white">
-            <a href="#">записаться</a>
-          </button>
-        </div>
-        
-        <ul class="menu-links absolute pt-4 z-10 bg-inherit w-full">
-          <li class="w-full"><a class="block w-11/12 mx-auto leading-10 font-light" href="#">О нас</a></li>
-          <li class="w-full"><a class="block w-11/12 mx-auto leading-10 font-light" href="#">Прайс</a></li>
-          <li class="w-full"><a class="block w-11/12 mx-auto leading-10 font-light" href="#">Отзывы</a></li>
-          <li class="w-full"><a class="block w-11/12 mx-auto leading-10 font-light" href="#">Студии</a></li>
-          <li class="w-full"><a class="block w-11/12 mx-auto leading-10 font-light" href="#">Блог</a></li>
-          <li class="w-full"><a class="block w-11/12 mx-auto leading-10 font-light" href="tel:+7(812)6605088">+7 (812) 660-50-88</a></li>          
-        </ul>
-      </nav>-->
+      <nav id="main-nav" class="fixed shadow-md text-base content w-full"></nav>
 
       <div class="banner mt-24">
         <div class="content w-11/12 mx-auto">
@@ -130,7 +92,7 @@
     </section>
     <section class="py-10">
       <div id="cheaper" class="animate__animated animate__fadeIn content lg:w-11/12 w-full mb-6 mx-auto hidden items-center justify-end">
-        <div class="w-full sm:w-1/3 h-64 my-10 sm:h-80 p-8 mx-14 ads-text">
+        <div class="w-full sm:w-1/2 md:w-1/3 h-64 my-10 xs:h-72 sm:h-80 p-8 mx-14 ads-text">
           <h2 class="mt-5 text-2xl lg:text-3xl ">Вместе дешевле!</h2>
           <p class="my-2 h-2/3 font-light ">
             Расскажите о нас своим подругам, знакомым, коллегам или
@@ -141,8 +103,8 @@
         </div>
       </div>
       <div id="sale" class="animate__animated animate__fadeIn content lg:w-11/12 w-full mb-6 mx-auto flex items-center justify-end">
-        <div class="w-full sm:w-1/3 h-80 sm:h-64 my-10 flex flex-col  justify-between p-8 mx-14 ads-text">
-          <h2 class="mt-5 lg:text-5xl text-4xl text-center text-white ">Скидка 10% <br> на первый визит</h2>
+        <div class="w-full sm:w-1/2 md:w-1/3 h-64 xs:h-72 sm:h-80 my-10 flex flex-col  justify-between p-8 mx-14 ads-text">
+          <h2 class="mt-5 sm:text-5xl text-4xl text-center text-white ">Скидка 10% <br> на первый визит</h2>
           <a href="#" class="font-light underline text-center text-white">Подробнее</a>
         </div>
       </div>
@@ -159,19 +121,23 @@
     <section class="services my-12 w-11/12 mx-auto flex flex-col">
       <h2 class="text-5xl text-center w-full">Наши услуги</h2>
       <div class="services-block w-full">
-        <nav class="flex justify-between md:w-5/6 w-full mt-9">
-          <h4 class=" font-normal text-3xl underLine">
+        <nav class="flex flex-wrap justify-between md:w-5/6 w-full mt-9">
+          <div class="flex sm:w-1/2 w-full sm:justify-around justify-between">
+            <h4 class=" font-normal text-3xl underLine">
             <button id="manicureBtn" class="pb-2">Маникюр</button>
           </h4>
           <h4 class="font-normal text-3xl underLine">
             <button id="growingBtn">Наращивание</button>
           </h4>
-          <h4 class=" font-normal text-3xl underLine">
+          </div>
+          <div class="flex sm:w-1/2 w-full sm:justify-around justify-between">
+            <h4 class=" font-normal text-3xl underLine">
             <button id="pedicureBtn">Педикюр</button>
           </h4>
           <h4 class=" font-normal text-3xl underLine">
             <button id="browsBtn">Брови</button>
           </h4>
+          </div>
         </nav>
 
         <div id="manicure" class="w-full flex justify-between">
@@ -302,43 +268,43 @@
   <section class="portfolio flex px-0 py-5 mb-10 items-center justify-center">
 
     <div class="wrapper cursor-pointer scroll-smooth flex w-5/6 md:w-11/12 relative">
-      <button id="left" class="hidden -left-12 active:scale-90 -translate-y-1/2 top-1/2 h-14 w-14 cursor-pointer absolute"><img class="h-14 w-14" src="./images/Vector 2.svg" alt=""></button>
+      <button id="left" class="hidden -left-10 sm:-left-12 active:scale-90 -translate-y-1/2 top-1/2 h-14 w-14 cursor-pointer absolute"><img class="h-14 w-14" src="./images/Vector 2.svg" alt=""></button>
       <div class="carousel scroll-smooth cursor-pointer overflow-hidden flex w-full ">
         <div class="h-50">
             <img class=" object-center object-cover select-none " src="./images/portfolio1.png" draggable="false"  alt="img"/>
             <h4 class="text-xl p-2">Больше работ можно найти в нашем <a class="underline" href="www.instagram.com">Instagram</a></h4>
         </div>
-        <div class="h-50
+        <div class="sm:h-50 h-40
         relative">
             <img class="z-10 object-center object-cover select-none" src="./images/portfolio2.png" alt="img" draggable="false"/>
             <h4 class="text-xl absolute -z-10 top-1/2 p-5">Больше работ можно найти в нашем <a class="underline" href="www.instagram.com">Instagram</a></h4>
         </div>  
-        <div class="h-50">
+        <div class="sm:h-50 h-40">
             <img class=" object-center object-cover select-none" src="./images/portfolio3.png" alt="img" draggable="false"/>
             <h4 class="text-xl p-5">Больше работ можно найти в нашем <a class="underline" href="www.instagram.com">Instagram</a></h4>
         </div>
-        <div class="h-50">
+        <div class="sm:h-50 h-40">
             <img class=" object-center object-cover select-none" src="./images/portfolio4.png" alt="img" draggable="false"/>
             <h4 class="text-xl pl-5">Больше работ можно найти в нашем <a class="underline" href="www.instagram.com">Instagram</a></h4>
         </div>
-        <div class="h-50">
+        <div class="sm:h-50 h-40">
             <img class=" object-center object-cover select-none" src="./images/portfolio5.png" alt="img" draggable="false"/>
             <h4 class="text-xl pl-5">Больше работ можно найти в нашем <a class="underline" href="www.instagram.com">Instagram</a></h4>
         </div>
-        <div class="h-50">
+        <div class="sm:h-50 h-40">
             <img class=" object-center object-cover select-none" src="./images/portfolio6.png" alt="img" draggable="false"/>
             <h4 class="text-xl pl-5">Больше работ можно найти в нашем <a class="underline" href="www.instagram.com">Instagram</a></h4>
         </div>
-        <div class="h-50">
+        <div class="sm:h-50 h-40">
             <img class=" object-center object-cover select-none" src="./images/portfolio7.png" alt="img" draggable="false"/>
             <h4 class="text-xl pl-5">Больше работ можно найти в нашем <a class="underline" href="www.instagram.com">Instagram</a></h4>
         </div>
-        <div class="h-50">
+        <div class="sm:h-50 h-40">
             <img class=" object-center object-cover select-none" src="./images/portfolio5.png" alt="img" draggable="false"/>
             <h4 class="text-xl pl-5">Больше работ можно найти в нашем <a class="underline" href="www.instagram.com">Instagram</a></h4>
         </div>
       </div>
-      <button id="right" class="-right-12 active:scale-90 -translate-y-1/2 top-1/2 h-14 w-14 cursor-pointer absolute"><img  class="h-14 w-14" src="./images/Vector 1.svg" alt=""></button>
+      <button id="right" class="sm:-right-12 -right-10 active:scale-90 -translate-y-1/2 top-1/2 h-14 w-14 cursor-pointer absolute"><img  class="h-14 w-14" src="./images/Vector 1.svg" alt=""></button>
     </div>
 
   </section>
@@ -347,7 +313,7 @@
     <div class="w-1/2"><img class="mx-auto" src="./images/gift.png" alt=""></div>
     <div class="flex flex-col justify-around w-2/5 mx-auto ml-8 ">
     <div>
-      <h2 class="mb-10 text-5xl">Не знаете,<br> что подарить?</h2>
+      <h2 class="mb-10 text-3xl md:text-5xl">Не знаете,<br> что подарить?</h2>
       <p>Подарочный сертификат  – это приятный сюрприз для Ваших близких и идеальный подарок коллеге, который обязательно порадует и подарит массу положительных эмоций!Вы можете оформить, как сертификат на бумажном носителе, так и в электронном виде.</p>
     </div>
              
