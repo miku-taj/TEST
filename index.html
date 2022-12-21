@@ -101,7 +101,7 @@
         <section class="text-gray-600 body-font">
       <div class="container px-5 py-24 w-11/12 mx-auto">
         <div class="flex flex-wrap -m-4 justify-around text-center">
-          <div class="p-4 sm:w-1/2 w-full">
+          <div class="p-4 sm:w-1/2 lg:w-1/3 w-full">
             <h2
               class="title-font font-medium sm:text-6xl text-7xl text-gray-900"
             >
@@ -109,7 +109,7 @@
             </h2>
             <p class="leading-relaxed">года мы радуем наших клиентов</p>
           </div>
-          <div class="p-4 sm:w-1/2 w-full">
+          <div class="p-4 sm:w-1/2 lg:w-1/3 w-full">
             <h2
               class="title-font font-medium sm:text-6xl text-7xl text-gray-900"
             >
@@ -117,7 +117,7 @@
             </h2>
             <p class="leading-relaxed">маникюров мы сделали за последний год</p>
           </div>
-          <div class="p-4 sm:w-1/2 w-full">
+          <div class="p-4 sm:w-1/2 lg:w-1/3 w-full">
             <h2
               class="title-font font-medium sm:text-6xl text-7xl text-gray-900"
             >
@@ -156,10 +156,10 @@
       </div>
     </section>
 
-    <section class="services my-12 w-5/6 mx-auto flex flex-col">
+    <section class="services my-12 w-11/12 mx-auto flex flex-col">
       <h2 class="text-5xl text-center w-full">Наши услуги</h2>
-      <div class="services-block w-full pr-5">
-        <nav class="flex gap-20 w-full mt-9">
+      <div class="services-block w-full">
+        <nav class="flex justify-between md:w-5/6 w-full mt-9">
           <h4 class=" font-normal text-3xl underLine">
             <button id="manicureBtn" class="pb-2">Маникюр</button>
           </h4>
@@ -175,32 +175,19 @@
         </nav>
 
         <div id="manicure" class="w-full flex justify-between">
-          <div class="listik flex flex-col w-1/2">
+          <div class="listik flex flex-col w-full md:w-2/3">
             <div class="spisok flex w-full justify-between">
-            <ul class="mt-7 w-fit mr-20">
-              <li class="mb-3">Снятие покрытия</li>
-              <li class="mb-3">Маникюр (аппаратный, комбинированный)</li>
-              <li class="mb-3">Покрытие гелем LUXIO, ONIQ</li>
-              <li class="mb-3">
-                Снятие + маникюр + Покрытие гелем LUXIO, ONIQ
+            <ul class="mt-7 w-full sm:mr-10 lg:mr-20">
+              <li class="mb-3 flex justify-between"><p>Снятие покрытия</p><p>200₽</p></li>
+              <li class="mb-3 flex justify-between"><p>Маникюр (аппаратный, комбинированный)</p><p>1000₽</p></li>
+              <li class="mb-3 flex justify-between"><p>Покрытие гелем LUXIO, ONIQ</p><p>900₽</p></li>
+              <li class="mb-3 flex justify-between"><p>Снятие + маникюр + Покрытие гелем LUXIO, ONIQ</p><p>2100₽</p>
               </li>
-              <li class="mb-3">Дизайн ногтей</li>
-              <li class="mb-3">Укрепление акриловой пудрой</li>
-              <li class="mb-3">Укрепление гелем</li>
-              <li class="mb-3">Ремонт натурального ногтя</li>
+              <li class="mb-3 flex justify-between"><p>Дизайн ногтей</p><p>20-300₽</p></li>
+              <li class="mb-3 flex justify-between"><p>Укрепление акриловой пудрой</p><p>300₽</p></li>
+              <li class="mb-3 flex justify-between"><p>Укрепление гелем</p><p>500₽</p></li>
+              <li class="mb-3 flex justify-between"><p>Ремонт натурального ногтя</p><p>100₽</p></li>
             </ul>
-
-            <ul class="w-fit mt-6 mr-1">
-              <li class="mb-3">200₽</li>
-              <li class="mb-3">1000₽</li>
-              <li class="mb-3">900₽</li>
-              <li class="mb-3">2100₽</li>
-              <li class="mb-3">20-300₽</li>
-              <li class="mb-3">300₽</li>
-              <li class="mb-3">500₽</li>
-              <li class="mb-3">100₽</li>
-            </ul>
-            
           </div>
           <button
           class=" uppercase mx-auto mt-4 justify-self-end border-2 py-2 px-3 border-black font-normal hover:bg-black hover:text-white"
@@ -209,7 +196,7 @@
         </button>
           </div>
           
-          <div class="w-1/3 -mt-11 -mr-5 hidden sm:block">
+          <div class="w-1/3 mt-0 lg:-mt-11 -mr-5 hidden sm:block ">
             <img class="" src="./images/services.png" alt="" />
           </div>
         </div>
@@ -239,7 +226,7 @@
           <a href="#">записаться</a>
         </button>
           </div>
-          <div class="w-1/3 -mt-11 -mr-5">
+          <div class="w-1/3 mt-0 lg:-mt-11 -mr-5 hidden sm:block">
             <img class="" src="./images/growing.png" alt="" />
           </div>
         </div>
@@ -267,7 +254,7 @@
           <a href="#">записаться</a>
         </button>
         </div>
-          <div class="w-1/3 -mt-11 -mr-5">
+          <div class="w-1/3 mt-0 lg:-mt-11 -mr-5 hidden sm:block">
             <img  src="./images/pedicure.png" alt="" />
           </div>
         </div>
@@ -301,7 +288,7 @@
           <a href="#">записаться</a>
         </button>
         </div>
-          <div class="w-1/3 -mt-11 -mr-5">
+          <div class="w-1/3 mt-0 lg:-mt-11 -mr-5 hidden sm:block">
             <img class="" src="./images/brows.png" alt="" />
           </div>
         </div>
