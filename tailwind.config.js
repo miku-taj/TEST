@@ -15,6 +15,7 @@ module.exports = {
 
       sm: { max: "639px" },
       // => @media (max-width: 639px) { ... }
+      xs: { max: "550px" },
     },
   },
   content: ["./src/**/*.{html,js}"],

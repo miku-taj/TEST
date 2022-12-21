@@ -110,6 +110,12 @@ button {
   background-size: cover;
 }
 
+@media screen and (max-width: 639px) {
+  #cheaper {
+    background-position: left;
+  }
+}
+
 #sale {
   transition: 0.5s ease-in-out;
   background-image: url(../images/sectionBg2.png);
@@ -119,14 +125,8 @@ button {
 }
 
 .ads-text {
-  background: rgba(255, 255, 255, 0.01);
-  backdrop-filter: blur(30px);
-}
-
-@media screen and (max-width: 639px) {
-  .ads-text {
-    backdrop-filter: none;
-  }
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
 }
 
 .switchers {
@@ -216,15 +216,13 @@ button {
   flex-shrink: 0;
   height: 340px;
   width: 25%;
-  padding-left: 14px;
+  padding-left: 7px;
+  padding-right: 7px;
 }
 
 .carousel div:hover img {
   border-radius: 20%;
   height: 50%;
-}
-.carousel div:first-child {
-  padding-left: 0px;
 }
 
 @media screen and (max-width: 900px) {

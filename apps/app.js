@@ -7,8 +7,8 @@ if (window.innerWidth < 900) {
           <button class="menu-icon cursor-pointer absolute left-0 w-10 h-8">
             <div class="relative bg-black h-1.5 w-10 rounded-md"></div>
           </button>
-          <a href="#"><img src="./images/logo.svg" alt="LOGO" /></a>
-          <button class="uppercase absolute right-0 border-2 py-2 px-3 border-black font-normal hover:bg-black hover:text-white">
+          <a href="#"><img class="sm:w-auto w-32" src="./images/logo.svg" alt="LOGO" /></a>
+          <button class="uppercase absolute right-0 border-2 py-1 px-2 sm:py-2 sm:px-3 text-sm border-black font-normal hover:bg-black hover:text-white">
             <a href="#">записаться</a>
           </button>
         </div>
@@ -156,7 +156,7 @@ browsBtn.addEventListener("click", () => {
 
 //portfolio
 const carousel = document.querySelector(".carousel"),
-  firstImg = carousel.querySelectorAll("img")[0],
+  firstImg = carousel.querySelectorAll("div")[0],
   arrowIcons = document.querySelectorAll(".wrapper button");
 
 let isDragStart = false,
