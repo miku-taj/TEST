@@ -24,18 +24,18 @@
         <div class="content w-11/12 mx-auto">
           <div class="heading_banner">
             <p class="text-base">XNAILS - студии маникюра в Санкт-Петербурге</p>
-            <h1 class="italic font-light text-5xl lg:text-7xl">
+            <h1 class="italic font-light text-2xl xs:text-3xl sm:text-5xl lg:text-7xl">
               Мы знаем все о
               <span class="Cormorant_SC">красивом</span>
             </h1>
           </div>
           <div class="bottom-banner flex justify-between w-full">
             <div class="left_banner w-3/5">
-              <h1 class="italic font-light lg:text-5xl text-4xl">
+              <h1 class="italic font-light text-xl xs:text-3xl sm:text-5xl">
                 и <span class="Cormorant_SC">качественном</span>
               </h1>
-              <h1 class="italic font-light lg:text-5xl text-4xl">покрытии</h1>
-              <div class="btns w-4/5 flex items-center gap-16 my-12">
+              <h1 class="italic font-light lg:text-5xl sm:text-4xl text-2xl">покрытии</h1>
+              <div class="btns w-4/5 sm:flex items-center gap-16 my-12 hidden">
                 <button
                   class="uppercase border-2 py-2 px-3 border-black font-normal hover:bg-black hover:text-white"
                 >
@@ -119,25 +119,21 @@
     </section>
 
     <section class="services my-12 w-11/12 mx-auto flex flex-col">
-      <h2 class="text-5xl text-center w-full">Наши услуги</h2>
+      <h2 class="md:text-5xl sm:text-4xl text-3xl text-center w-full">Наши услуги</h2>
       <div class="services-block w-full">
         <nav class="flex flex-wrap justify-between md:w-5/6 w-full mt-9">
-          <div class="flex sm:w-1/2 w-full sm:justify-around justify-between">
-            <h4 class=" font-normal text-3xl underLine">
+            <h4 class=" font-normal text-xl sm:text-3xl underLine">
             <button id="manicureBtn" class="pb-2">Маникюр</button>
           </h4>
-          <h4 class="font-normal text-3xl underLine">
+          <h4 class="font-normal text-xl sm:text-3xl underLine">
             <button id="growingBtn">Наращивание</button>
           </h4>
-          </div>
-          <div class="flex sm:w-1/2 w-full sm:justify-around justify-between">
-            <h4 class=" font-normal text-3xl underLine">
+            <h4 class=" font-normal text-xl sm:text-3xl underLine">
             <button id="pedicureBtn">Педикюр</button>
           </h4>
-          <h4 class=" font-normal text-3xl underLine">
+          <h4 class=" font-normal text-xl sm:text-3xl underLine">
             <button id="browsBtn">Брови</button>
           </h4>
-          </div>
         </nav>
 
         <div id="manicure" class="w-full flex justify-between">
@@ -156,7 +152,7 @@
             </ul>
           </div>
           <button
-          class=" uppercase mx-auto mt-4 justify-self-end border-2 py-2 px-3 border-black font-normal hover:bg-black hover:text-white"
+          class="uppercase mx-auto mt-4 justify-self-end border-2 py-2 px-3 border-black font-normal hover:bg-black hover:text-white"
         >
           <a href="#">записаться</a>
         </button>
@@ -167,23 +163,15 @@
           </div>
         </div>
 
-        <div id="growing" class="w-fit justify-between hidden">
-          <div class="listik flex flex-col w-1/2">
+        <div id="growing" class="w-full justify-between hidden">
+          <div class="listik flex flex-col w-full md:w-2/3">
             <div class="spisok flex w-full justify-between">
-            <ul class="mt-7 w-fit mr-20">
-              <li class="mb-3">Снятие наращенных ногтей</li>
-              <li class="mb-3">Ремонт ногтя гелем</li>
-              <li class="mb-3">Наращивание + маникюр + покрытие</li>
-              <li class="mb-3">Коррекция + маникюр + покрытие</li>
-              <li class="mb-3">Донаращивание сломанного ногтя</li>
-            </ul>
-
-            <ul class="w-fit mt-6 mr-1">
-              <li class="mb-3">400₽</li>
-              <li class="mb-3">200₽</li>
-              <li class="mb-3">3100₽</li>
-              <li class="mb-3">2700₽</li>
-              <li class="mb-3">200₽</li>
+            <ul class="mt-7 w-full sm:mr-10 lg:mr-20">
+              <li class="mb-3 flex justify-between"><p>Снятие наращенных ногтей</p><p>400₽</p></li>
+              <li class="mb-3 flex justify-between"><p>Ремонт ногтя гелем</p><p>200₽</p></li>
+              <li class="mb-3 flex justify-between"><p>Наращивание + маникюр + покрытие</p><p>3100₽</p></li>
+              <li class="mb-3 flex justify-between"><p>Коррекция + маникюр + покрытие</p><p>2700₽</p></li>
+              <li class="mb-3 flex justify-between"><p>Донаращивание сломанного ногтя</p><p>200₽</p></li>
             </ul>
             </div>
             <button
@@ -197,21 +185,14 @@
           </div>
         </div>
 
-        <div id="pedicure" class="w-fit justify-between hidden">
-          <div class="listik flex flex-col w-1/2">
+        <div id="pedicure" class="w-full justify-between hidden">
+          <div class="listik flex flex-col w-full md:w-2/3">
             <div class="spisok flex w-full justify-between">
-            <ul class="mt-7 w-fit mr-20">
-               <li class="mb-3">Снятие покрытия</li>
-              <li class="mb-3">Педикюр</li>
-              <li class="mb-3">Покрытие гелем LUXIO, ONIQ</li>
-              <li class="mb-3">Снятие + педикюр + покрытие</li>
-            </ul>
-
-            <ul class="w-fit mt-6 mr-1">
-                            <li class="mb-3">200 ₽</li>
-              <li class="mb-3">1400 ₽</li>
-              <li class="mb-3">900 ₽</li>
-              <li class="mb-3">2700 ₽</li>
+            <ul class="mt-7 w-full sm:mr-10 lg:mr-20">
+              <li class="mb-3 flex justify-between"><p>Снятие покрытия</p><p>200₽</p></li>
+              <li class="mb-3 flex justify-between"><p>Педикюр </p><p>1400₽</p></li>
+              <li class="mb-3 flex justify-between"><p>Покрытие гелем LUXIO, ONIQ</p><p>900₽</p></li>
+              <li class="mb-3 flex justify-between"><p>Снятие + педикюр + покрытие</p><p>2700₽</p></li>
             </ul>
           </div>
             <button
@@ -225,27 +206,17 @@
           </div>
         </div>
 
-        <div id="brows" class="w-fit justify-between hidden">
-          <div class="listik flex flex-col w-1/2">
+        <div id="brows" class="w-full justify-between hidden">
+          <div class="listik flex flex-col w-full md:w-2/3">
             <div class="spisok flex w-full justify-between">
-            <ul class="mt-7 w-fit mr-20">
-               <li class="mb-3">Коррекция бровей</li>
-              <li class="mb-3">Окрашивание бровей краской</li>
-              <li class="mb-3">Окрашивание бровей хной</li>
-              <li class="mb-3">Коррекция и окрашивание хной /краской</li>
-              <li class="mb-3">Моделирование + коррекция + окрашивание</li>
-              <li class="mb-3">Ламинирование + кореекция</li>
-              <li class="mb-3">Ламинирование + коррекция + окрашивание</li>
-            </ul>
-
-            <ul class="w-fit mt-6 mr-1">
-                            <li class="mb-3">600 ₽</li>
-              <li class="mb-3">900₽</li>
-              <li class="mb-3">900₽</li>
-              <li class="mb-3">1500₽</li>
-              <li class="mb-3">2000₽</li>
-              <li class="mb-3">2000₽</li>
-              <li class="mb-3">2300₽</li>
+            <ul class="mt-7 w-full sm:mr-10 lg:mr-20">
+              <li class="mb-3 flex justify-between"><p>Коррекция бровей</p><p>600 ₽</p></li>
+              <li class="mb-3 flex justify-between"><p>Окрашивание бровей краской</p><p>900 ₽</p></li>
+              <li class="mb-3 flex justify-between"><p>Окрашивание бровей хной</p><p>900 ₽</p></li>
+              <li class="mb-3 flex justify-between"><p>Коррекция и окрашивание хной /краской</p><p>900 ₽</p></li>
+              <li class="mb-3 flex justify-between"><p>Моделирование + коррекция + окрашивание</p><p>1500 ₽</p></li>
+              <li class="mb-3 flex justify-between"><p>Ламинирование + кореекция</p><p>2000 ₽</p></li>
+              <li class="mb-3 flex justify-between"><p>Ламинирование + коррекция + окрашивание</p><p>2700 ₽</p></li>
             </ul>
           </div>
            <button
@@ -699,7 +670,7 @@
   </footer>
 
 
-  <footer class="flex flex-col mx-auto items-center w-11/12 mt-28 mb-10">
+  <footer class="sm:hidden flex flex-col mx-auto items-center w-11/12 mt-28 mb-10">
       <img src="./images/logo.svg" alt="LOGO">
       <div class="flex gap-3 my-4">
         <img class="h-6 w-6" src="./images/instaLogo.svg" alt="">
