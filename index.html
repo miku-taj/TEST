@@ -289,7 +289,7 @@
 
   <section class="flex mb-10 sm:flex-row flex-col items-stretch w-11/12 justify-between mx-auto ">
     <div class="w-1/2 sm:mx-0 mx-auto"><img class="mx-auto" src="./images/gift.png" alt=""></div>
-    <div class="flex flex-col justify-around sm:w-2/5 w-5/6 mx-auto ml-8 ">
+    <div class="flex flex-col justify-around sm:w-3/5 md:w-2/5 w-5/6 mx-auto ml-8 ">
       <div class="text-center">
         <h2 class="mb-8 mt-4 sm:mb-10 sm:mt-0 text-3xl md:text-5xl">Не знаете,<br> что подарить?</h2>
         <p>Подарочный сертификат  – это приятный сюрприз для Ваших близких и идеальный подарок коллеге, который обязательно порадует и подарит массу положительных эмоций!Вы можете оформить, как сертификат на бумажном носителе, так и в электронном виде.</p>
@@ -298,22 +298,29 @@
       <button class=" w-fit uppercase border-2 py-2 px-3 border-black font-normal hover:bg-black hover:text-white">
         <a href="#">оформить</a>
       </button>
-      <a class="underline text-slate-800 ml-10" href="#">Узнать стоимость</a></div>
+      <a class="underline text-slate-800 ml-8 lg:ml-12" href="#">Узнать стоимость</a></div>
     </div>
   </section>
-  <section class="we-care h-screen my-14 w-11/12 mx-auto flex">
-      <div class="coms w-3/5 h-screen flex flex-col justify-between ml-5">
-        <div class="title w-full flex flex-col">
-          <h1 class="italic font-light text-6xl ml-4"> Мы <span class="Cormorant_SC">заботимся</span><br> о наших <span class="Cormorant_SC">клиентах</span></h1>
-          <h1 class="italic self-end font-light text-6xl ml-auto">И они это
+  <section class="we-care  my-14 w-11/12 mx-auto flex">
+      <div class="coms md:w-3/5 w-full flex flex-col justify-between ml-5">
+        <div class="flex flex-row"><div class="title w-full flex flex-col">
+          <h1 class="md:block hidden italic font-light text-3xl sm:text-4xl md:text-5xl ml-4"> Мы <span class="Cormorant_SC">заботимся</span><br> о наших <span class="Cormorant_SC">клиентах</span></h1>
+          <h1 class="md:block hidden italic ml-4 md:self-end font-light text-3xl sm:text-4xl md:text-5xl">И они это
+              <span class="Cormorant_SC">ценят</span>
+          </h1>
+          <h1 class="md:hidden block italic font-light text-3xl sm:text-4xl md:text-5xl ml-4"> Мы <span class="Cormorant_SC">заботимся</span> о наших <span class="Cormorant_SC">клиентах</span></h1>
+          <h1 class="md:hidden block italic ml-4 md:self-end font-light text-3xl sm:text-4xl md:text-5xl">И они это
               <span class="Cormorant_SC">ценят</span>
           </h1>
         </div>
+        <img class="md:hidden h-44 block ml-auto w-1/2 object-cover object-center" src="./images/we_care (1).png" alt="">    
+  
+      </div>
         <div class="comment-wrapper cursor-pointer scroll-smooth my-2 flex w-full relative">
           <p><a class="text-gray-800 underline-offset-1 absolute right-0 top-5 underline" href="#">Leave comment</a></p>
           <button
         id="left"
-        class="hidden -left-12 active:scale-90 -translate-y-1/2 top-1/2 h-12 w-12 cursor-pointer absolute"
+        class="hidden -left-9 lg:-left-12 active:scale-90 -translate-y-1/2 top-1/2 h-12 w-12 cursor-pointer absolute"
       >
         <img class="h-12 w-12" src="./images/Vector 2.svg" alt="" />
           </button>
@@ -578,13 +585,13 @@
           </div>
           <button
         id="right"
-        class="-right-12 active:scale-90 -translate-y-1/2 top-1/2 h-12 w-12 cursor-pointer absolute"
+        class="-right-9 lg:-right-12 active:scale-90 -translate-y-1/2 top-1/2 h-12 w-12 cursor-pointer absolute"
       >
         <img class="h-12 w-12" src="./images/Vector 1.svg" alt="" />
           </button>
         </div>
       </div>
-      <img class="ml-auto w-1/3 object-cover object-center" src="./images/we_care (1).png" alt="">    
+      <img class="hidden md:block ml-auto w-1/3 object-cover object-center" src="./images/we_care (1).png" alt="">    
   </section>
     
   <section class="sm:w-11/12 mx-auto places mt-28 mb-8">
