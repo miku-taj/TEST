@@ -14,7 +14,7 @@ if (window.innerWidth < 900) {
         </div>
         
         <ul class="menu-links absolute pt-4 z-10 bg-inherit w-full">
-          <li class="w-full"><a class="block w-11/12 mx-auto leading-10 font-light" href="#">О нас</a></li>
+          <li class="w-full"><a class="block w-11/12 mx-auto leading-10 font-light" href="./about.html">О нас</a></li>
           <li class="w-full"><a class="block w-11/12 mx-auto leading-10 font-light" href="#">Прайс</a></li>
           <li class="w-full"><a class="block w-11/12 mx-auto leading-10 font-light" href="#">Отзывы</a></li>
           <li class="w-full"><a class="block w-11/12 mx-auto leading-10 font-light" href="#">Студии</a></li>
@@ -36,8 +36,8 @@ if (window.innerWidth < 900) {
   });
 } else {
   mainNav.innerHTML = `        <div class="flex py-3 justify-between mx-auto items-center w-11/12">
-        <a href="#"><img src="./images/logo.svg" alt="LOGO" /></a>
-        <a class="font-light underLine" href="#">О нас</a>
+        <a href="./index.html"><img src="./images/logo.svg" alt="LOGO" /></a>
+        <a class="font-light underLine" href="./about.html">О нас</a>
         <a class="font-light underLine" href="#">Прайс</a>
         <a class="font-light underLine" href="#">Отзывы</a>
         <a class="font-light underLine" href="#">Студии</a>
