@@ -1,0 +1,254 @@
+* {
+  box-sizing: border-box;
+  max-width: 100vw;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  background-color: rgb(255, 246, 233);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.Cormorant_SC {
+  font-family: "Cormorant SC", serif;
+  font-style: normal;
+}
+
+p {
+  font-family: "Raleway", sans-serif;
+}
+
+#main-nav {
+  z-index: 100;
+  background-color: rgb(255, 246, 233);
+  transition: 400ms ease-in;
+}
+#main-nav > div {
+  height: 100%;
+  background-color: rgb(255, 246, 233);
+}
+nav a {
+  transition: 400ms ease-in;
+}
+.menu-icon > div {
+  transition: 100ms;
+}
+.menu-icon > div::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background-color: black;
+  top: -12px;
+  left: 0;
+  border-radius: 3px;
+  transition: 300ms;
+}
+.menu-icon > div::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background-color: black;
+  bottom: -12px;
+  left: 0;
+  border-radius: 3px;
+  transition: 300ms;
+}
+
+.menu-icon.activated > div {
+  background-color: transparent;
+}
+.menu-icon.activated > div::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background-color: black;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+  transform: rotate(45deg);
+}
+.menu-icon.activated > div::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background-color: black;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+  transform: rotate(-45deg);
+}
+.menu-links {
+  transition: 500ms;
+  top: -1000px;
+}
+.menu-links > li:hover {
+  background-color: rgb(226, 210, 189);
+}
+
+button {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.underLine {
+  text-decoration: none;
+  position: relative;
+}
+
+.underLine:after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  /* adjust this to move up and down. you may have to adjust the line height of the paragraph if you move it down a lot. */
+  bottom: 0px;
+  /* center - (optional) use with adjusting width   */
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 0%;
+  /* optional animation */
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.underLine-active:after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  /* adjust this to move up and down. you may have to adjust the line height of the paragraph if you move it down a lot. */
+  bottom: 0px;
+  /* center - (optional) use with adjusting width   */
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 100%;
+
+  /* optional animation */
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* optional hover classes used with anmiation */
+.underLine:hover:after {
+  width: 100%;
+  background: black;
+}
+
+.wrapper {
+  max-width: 1200px;
+}
+.wrapper button {
+  transition: transform 0.1s linear;
+}
+
+.carousel.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.carousel.dragging div {
+  pointer-events: none;
+}
+.carousel img {
+  border-radius: 10%;
+  height: 340px;
+  width: 100%;
+  user-select: none;
+  transition: 300ms ease-in-out;
+}
+
+.carousel div {
+  flex-shrink: 0;
+  height: 340px;
+  width: 25%;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.carousel .image {
+  border-radius: 10%;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(120deg, #d4dcb2, #d4dcb2);
+  transition: 300ms;
+}
+.img1::before {
+  border-radius: 10%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/Rectangle\ 40.png);
+  opacity: 1;
+  z-index: 1;
+  transition: 300ms;
+}
+
+.img2::before {
+  border-radius: 10%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/Rectangle\ 41.png);
+  opacity: 1;
+  z-index: 1;
+  transition: 300ms;
+}
+
+.img3::before {
+  border-radius: 10%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/Rectangle\ 43.png);
+  opacity: 1;
+  z-index: 1;
+  transition: 300ms;
+}
+
+.image:hover::before {
+  opacity: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .carousel div {
+    width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .carousel div {
+    width: 100%;
+  }
+}
