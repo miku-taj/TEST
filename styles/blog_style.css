@@ -167,3 +167,12 @@ button {
 .big-el:hover .go-right {
   width: 100%;
 }
+
+@media screen and (max-width: 639px) {
+  .big-el {
+    margin-top: 400px;
+  }
+  footer {
+    margin-top: 460px;
+  }
+}
