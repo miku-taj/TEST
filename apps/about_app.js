@@ -63,6 +63,20 @@ window.addEventListener("scroll", () => {
   theEnd = scrollTop;
 });
 
+//appearing text
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("shown");
+    } else {
+      entry.target.classList.remove("shown");
+    }
+  });
+});
+const hiddenElements = document.querySelectorAll(".not-shown");
+hiddenElements.forEach((el) => observer.observe(el));
+
 //portfolio
 const carousel = document.querySelector(".carousel"),
   firstImg = carousel.querySelectorAll("div")[0],
