@@ -1,3 +1,14 @@
+const popUp = document.querySelector(".pop-up");
+if (localStorage.wasVisited === undefined) {
+  popUp.classList.add("flex");
+  popUp.classList.remove("hidden");
+}
+setTimeout(() => {
+  popUp.classList.remove("flex");
+  popUp.classList.add("hidden");
+  localStorage.setItem("wasVisited", 1);
+}, 8000);
+
 //Main nav
 let theEnd = 0;
 const mainNav = document.querySelector("#main-nav");

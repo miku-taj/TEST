@@ -15,8 +15,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>XNAILS</title>
-  </head>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
   <body>
+    <div class="pop-up h-screen w-screen fixed hidden justify-center items-center flex-col left-0 top-0">
+      <div class="h-4/5 w-11/12 text-center mx-auto flex justify-center items-center flex-col">
+        <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_ghqxtv8c.json" background="transparent" speed="1" style="width: 300px; height: 200px;" loop="" autoplay=""></lottie-player>
+        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_sk3v10sgov.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop="" autoplay=""></lottie-player>
+        <p class="text-white">
+          Пусть будет добрым Новый год! Подарит счастье и везение, любовь и радость принесет и всех желаний исполнения!
+       </p>
+      </div>
+      <div class="absolute h-screen w-screen">
+        <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_by7epsey.json" background="transparent" speed="1" style="width: 100%; height: 100%;" loop="" autoplay=""></lottie-player>
+      </div>
+      </div>
     <header class="flex flex-col items-center h-fit">
       <nav id="main-nav" class="fixed shadow-md text-base content w-full"></nav>
 
@@ -718,6 +731,12 @@
       <p>Design by @aleks_webdesign</p>
     </div>
   </footer>
+
+  
+    <section class="hidden h-screen w-screen justify-center items-center fixed top-0 left-0 dim">
+      <div class="sign"></div>
+    </section>
+
     <script src="./apps/app.js"></script>
   </body>
 </html>
