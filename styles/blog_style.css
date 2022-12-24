@@ -101,7 +101,6 @@ button {
   text-transform: uppercase;
   font-weight: 400;
 }
-
 .underLine {
   text-decoration: none;
   position: relative;
@@ -146,129 +145,25 @@ button {
   transition: 0.5s;
 }
 
+/* optional hover classes used with anmiation */
 .underLine:hover:after {
   width: 100%;
   background: black;
 }
 
-.not-shown {
-  opacity: 0;
-  filter: blur(5px);
+.transparent-background {
+  background: rgba(255, 250, 243, 0.7);
+  backdrop-filter: blur(10px);
+}
+.go-up {
   transition: 1s;
-  transform: translateX(-100%);
 }
-.shown {
-  filter: blur(0);
-  transform: translateX(0);
-  opacity: 1;
+.go-right {
+  transition: 1s;
 }
-
-.description:nth-child(2) {
-  transition-delay: 200ms;
-}
-.description:nth-child(1) {
-  transition-delay: 400ms;
-}
-
-/* our specialists */
-
-.wrapper {
-  max-width: 1200px;
-}
-.wrapper button {
-  transition: transform 0.1s linear;
-}
-
-.carousel.dragging {
-  cursor: grab;
-  scroll-behavior: auto;
-}
-.carousel.dragging div {
-  pointer-events: none;
-}
-.carousel img {
-  border-radius: 10%;
-  height: 340px;
-  width: 100%;
-  user-select: none;
-  transition: 300ms ease-in-out;
-}
-
-.carousel div {
-  flex-shrink: 0;
-  height: 340px;
-  width: 25%;
-  padding-left: 7px;
-  padding-right: 7px;
-}
-
-.carousel .image {
-  border-radius: 10%;
+.lil-els > div:hover .go-up {
   height: 100%;
+}
+.big-el:hover .go-right {
   width: 100%;
-  background-image: linear-gradient(120deg, #d4dcb2, #d4dcb2);
-  transition: 300ms;
-}
-.img1::before {
-  border-radius: 10%;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(../images/Rectangle2.png);
-  opacity: 1;
-  z-index: 1;
-  transition: 300ms;
-}
-
-.img2::before {
-  border-radius: 10%;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(../images/Rectangle1.png);
-  opacity: 1;
-  z-index: 1;
-  transition: 300ms;
-}
-
-.img3::before {
-  border-radius: 10%;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(../images/Rectangle3.png);
-  opacity: 1;
-  z-index: 1;
-  transition: 300ms;
-}
-
-.image:hover::before {
-  opacity: 0;
-}
-
-@media screen and (max-width: 900px) {
-  .carousel div {
-    width: calc(100% / 2);
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .carousel div {
-    width: 100%;
-  }
 }
