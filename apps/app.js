@@ -18,7 +18,7 @@ if (window.innerWidth < 900) {
           <li class="w-full"><a class="block w-11/12 mx-auto leading-10 font-light" href="#">Прайс</a></li>
           <li class="w-full"><a class="block w-11/12 mx-auto leading-10 font-light" href="#">Отзывы</a></li>
           <li class="w-full"><a class="block w-11/12 mx-auto leading-10 font-light" href="#">Студии</a></li>
-          <li class="w-full"><a class="block w-11/12 mx-auto leading-10 font-light" href="#">Блог</a></li>
+          <li class="w-full"><a class="block w-11/12 mx-auto leading-10 font-light" href="./blog.html">Блог</a></li>
           <li class="w-full"><a class="block w-11/12 mx-auto leading-10 font-light" href="tel:+7(812)6605088">+7 (812) 660-50-88</a></li>          
         </ul>`;
   const menuIcon = document.querySelector(".menu-icon");
@@ -41,7 +41,7 @@ if (window.innerWidth < 900) {
         <a class="font-light underLine" href="#">Прайс</a>
         <a class="font-light underLine" href="#">Отзывы</a>
         <a class="font-light underLine" href="#">Студии</a>
-        <a class="font-light underLine" href="#">Блог</a>
+        <a class="font-light underLine" href="./blog.html">Блог</a>
         <a class="font-light underLine" href="tel:+7(812)6605088"
           >+7 (812) 660-50-88</a
         >
