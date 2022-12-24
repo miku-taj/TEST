@@ -199,7 +199,7 @@ button {
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../images/Rectangle\ 40.png);
+  background-image: url(../images/Rectangle2.png);
   opacity: 1;
   z-index: 1;
   transition: 300ms;
@@ -215,7 +215,7 @@ button {
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../images/Rectangle\ 41.png);
+  background-image: url(../images/Rectangle1.png);
   opacity: 1;
   z-index: 1;
   transition: 300ms;
@@ -231,7 +231,7 @@ button {
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../images/Rectangle\ 43.png);
+  background-image: url(../images/Rectangle3.png);
   opacity: 1;
   z-index: 1;
   transition: 300ms;
