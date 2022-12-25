@@ -7,7 +7,7 @@ if (window.innerWidth < 900) {
           <button class="menu-icon cursor-pointer absolute left-0 w-10 h-8">
             <div class="relative bg-black h-1.5 w-10 rounded-md"></div>
           </button>
-          <a href="#"><img class="sm:w-auto w-32" src="./images/logo.svg" alt="LOGO" /></a>
+          <a href="./index.html"><img class="sm:w-auto w-32" src="./images/logo.svg" alt="LOGO" /></a>
           <button class="uppercase hidden sm:block absolute right-0 border-2 py-1 px-2 sm:py-2 sm:px-3 text-sm border-black font-normal hover:bg-black hover:text-white">
             <a href="#">записаться</a>
           </button>

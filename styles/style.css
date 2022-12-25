@@ -300,7 +300,10 @@ button {
   background-color: antiquewhite;
   position: fixed;
 }
-.dim {
+.sign-window {
+  height: 110vh;
+  width: 100vw;
+  overflow: hidden;
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.7);
 }
