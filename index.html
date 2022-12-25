@@ -733,8 +733,20 @@
   </footer>
 
   
-    <section class="hidden h-screen w-screen justify-center items-center fixed top-0 left-0 dim">
-      <div class="sign"></div>
+    <section class="flex h-screen w-screen justify-center items-center fixed top-0 left-0 dim">
+      <div class="sign py-5 px-8">
+        <h2 class="text-3xl">Оставьте свои контакты <br>и выберите <span class="italic text-4xl">удобное вам</span> время</h2>
+        <form action="#" class="mt-2 flex gap-5">
+          <input class="p-3 mt-4 border-b border-black w-1/2" type="text" name="name" placeholder="Фамилия">
+          <input class="p-3 mt-4 border-b border-black w-1/2" type="text" name="name" placeholder="Имя">
+        </form>
+        <form action="#">
+          <input class="mt-4 p-3 border-b border-black w-full" type="email" name="customer_mail" id="email" placeholder="Email">
+        </form>
+        <form action="#">
+          <input class="mt-4 p-3 border-b border-black w-full" type="tel" placeholder="Phone:" name="customer_tel" id="phone">
+        </form>
+      </div>
     </section>
 
     <script src="./apps/app.js"></script>
