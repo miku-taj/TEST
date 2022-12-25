@@ -355,16 +355,30 @@ petrogradBtn.addEventListener("click", () => {
 const signUp = document.querySelector(".sign-window");
 const signBtns = document.querySelectorAll(".sign-btn");
 const closeSign = document.querySelector("#close-sign");
-
+const signedUp = document.querySelector("#signed");
+const inputs = document.querySelectorAll(".sign-input");
+const warning = document.querySelector("#warning");
 signBtns.forEach((el) => {
   el.addEventListener("click", () => {
     signUp.classList.add("flex");
     signUp.classList.remove("hidden");
-    console.log("clicked");
   });
 });
 
 closeSign.addEventListener("click", () => {
   signUp.classList.add("hidden");
   signUp.classList.remove("flex");
+});
+let ifInputIsEmpty = false;
+signedUp.addEventListener("click", () => {
+  ifInputIsEmpty = false;
+  inputs.forEach((el) => {
+    if (el.value === "") ifInputIsEmpty = true;
+  });
+  if (ifInputIsEmpty) {
+    warning.classList.remove("hidden");
+  } else {
+    signUp.classList.add("hidden");
+    signUp.classList.remove("flex");
+  }
 });
