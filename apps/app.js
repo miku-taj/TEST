@@ -7,7 +7,7 @@ setTimeout(() => {
   popUp.classList.remove("flex");
   popUp.classList.add("hidden");
   localStorage.setItem("wasVisited", 1);
-}, 8000);
+}, 10000);
 
 //Main nav
 let theEnd = 0;
