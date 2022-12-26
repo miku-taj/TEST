@@ -193,6 +193,35 @@
       </div>
     </section>
 
+    <section class="sign-window hidden h-[105%] w-full justify-center items-center fixed top-0 left-0 dim">
+  </div>
+  <div class="sign w-[600px] h-[400px] py-5 px-8 flex-col relative">
+    <div class="absolute w-10 h-8 ml-4 mt-5 right-0 top-0">
+        <div id="close-sign" class="self-end cursor-pointer relative w-10 h-8"></div>
+    </div>
+    <div class="flex w-full items-baseline justify-between">
+        <h2 class="text-2xl sm:text-3xl">Оставьте свои контакты <br>и выберите <span class="italic text-2xl sm:text-4xl">удобное вам</span> время</h2>
+    </div>
+    <form action="#" class="mt-2 flex gap-5">
+      <input class="sign-input p-3 mt-4 border-b border-black w-1/2" type="text" name="name" placeholder="Фамилия">
+      <input class="sign-input p-3 mt-4 border-b border-black w-1/2" type="text" name="name" placeholder="Имя">
+    </form>
+    <form action="#">
+      <input class="sign-input mt-4 p-3 border-b border-black w-full" type="email" name="customer_mail" id="email" placeholder="Email">
+    </form>
+    <form action="#">
+      <input class="sign-input mt-4 p-3 border-b border-black w-full" type="tel" placeholder="Phone:" name="customer_tel" id="phone">
+    </form>
+    <div class="w-full flex items-center ">
+      <button id="signed" class="w-fit mt-4 uppercase border-2 py-2 px-3 border-black font-normal hover:bg-black hover:text-white">
+        записаться
+      </button>
+      <p id="warning" class="hidden text-red-800 pt-3 pl-4">Заполните все поля!</p>
+      <h1 id="success" class="hidden text-xl pl-4">Ваша заявка успешно отправлена</h1>
+    </div>    
+  </div>
+</section>
+
     <footer
       class="hidden sm:flex gap-3 mx-auto justify-between w-11/12 mt-28 mb-10"
     >

@@ -358,6 +358,7 @@ const closeSign = document.querySelector("#close-sign");
 const signedUp = document.querySelector("#signed");
 const inputs = document.querySelectorAll(".sign-input");
 const warning = document.querySelector("#warning");
+const successfulReg = document.querySelector("#success");
 signBtns.forEach((el) => {
   el.addEventListener("click", () => {
     signUp.classList.add("flex");
@@ -378,7 +379,9 @@ signedUp.addEventListener("click", () => {
   if (ifInputIsEmpty) {
     warning.classList.remove("hidden");
   } else {
-    signUp.classList.add("hidden");
-    signUp.classList.remove("flex");
+    warning.classList.add("hidden");
+    warning.classList.remove("flex");
+    successfulReg.classList.add("flex");
+    successfulReg.classList.remove("hidden");
   }
 });

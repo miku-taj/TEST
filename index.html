@@ -15,6 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>XNAILS</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
   <body>
@@ -142,16 +143,16 @@
       <h2 class="md:text-5xl sm:text-4xl text-3xl text-center w-full">Наши услуги</h2>
       <div class="services-block w-full">
         <nav class="flex flex-wrap justify-between md:w-5/6 w-full mt-9">
-            <h4 class=" font-normal text-xl sm:text-3xl underLine">
+            <h4 class="p-1  font-normal text-xl sm:text-3xl underLine">
             <button id="manicureBtn" class="pb-2">Маникюр</button>
           </h4>
-          <h4 class="font-normal text-xl sm:text-3xl underLine">
+          <h4 class="p-1 font-normal text-xl sm:text-3xl underLine">
             <button id="growingBtn">Наращивание</button>
           </h4>
-            <h4 class=" font-normal text-xl sm:text-3xl underLine">
+            <h4 class="p-1  font-normal text-xl sm:text-3xl underLine">
             <button id="pedicureBtn">Педикюр</button>
           </h4>
-          <h4 class=" font-normal text-xl sm:text-3xl underLine">
+          <h4 class="p-1  font-normal text-xl sm:text-3xl underLine">
             <button id="browsBtn">Брови</button>
           </h4>
         </nav>
@@ -291,7 +292,7 @@
             <h4 class="text-xl pl-5">Больше работ можно найти в нашем <a class="underline" href="www.instagram.com">Instagram</a></h4>
         </div>
       </div>
-      <button id="right" class="sm:-right-12 -right-10 active:scale-90 -translate-y-1/2 top-1/2 h-14 w-14 cursor-pointer absolute"><img  class="h-14 w-14" src="./images/Vector 1.svg" alt=""></button>
+      <button id="right" class=" sm:-right-12 -right-10 active:scale-90 -translate-y-1/2 top-1/2 h-14 w-14 cursor-pointer absolute"><img  class="h-14 w-14" src="./images/Vector 1.svg" alt=""></button>
     </div>
 
   </section>
@@ -303,7 +304,7 @@
         <h2 class="mb-8 mt-4 sm:mb-10 sm:mt-0 text-3xl md:text-5xl">Не знаете,<br> что подарить?</h2>
         <p>Подарочный сертификат  – это приятный сюрприз для Ваших близких и идеальный подарок коллеге, который обязательно порадует и подарит массу положительных эмоций!Вы можете оформить, как сертификат на бумажном носителе, так и в электронном виде.</p>
       </div>    
-    <div class="sm:block flex justify-center sm:mt-0 mt-5">
+    <div class="sm:block flex justify-center gap-4 items-center sm:mt-0 mt-5">
       <button class=" w-fit uppercase border-2 py-2 px-3 border-black font-normal hover:bg-black hover:text-white">
         <a href="#">оформить</a>
       </button>
@@ -392,7 +393,7 @@
                 />
               </svg>
             </span>
-            <p class="mt-4 sm:w-full w-5/6 text-md text-gray-600">
+            <p class="mt-4 sm:w-11/12 w-5/6 text-md text-gray-600">
               Моя любимая студия! Удобное месторасположение, в 5 минутах от
               метро Чернышевская. Приятная атмосфера, все девочки очень
               профессиональные мастера своего дела! Очень приветливый
@@ -400,7 +401,7 @@
             </p>
               </span>
             </div>
-            <div class=" w-full rounded-2xl px-10 py-5 transition">
+          <div class=" w-full rounded-2xl px-10 py-5 transition">
           <h1 class="text-lg font-semibold hover:underline cursor-pointer">
             Irina Buzova
           </h1>
@@ -595,7 +596,7 @@
           </div>
           <button
         id="right"
-        class="sm:-right-9 -right-0 lg:-right-12 active:scale-90 -translate-y-1/2 top-1/2 h-12 w-12 cursor-pointer absolute"
+        class="right-0 lg:-right-12 active:scale-90 -translate-y-1/2 top-1/2 h-12 w-12 cursor-pointer absolute"
       >
         <img class="h-12 w-12" src="./images/Vector 1.svg" alt="" />
           </button>
@@ -728,34 +729,35 @@
   </footer>
 
   
-    <section class="sign-window hidden h-screen w-screen justify-center items-center fixed top-0 left-0 dim">
-      <div class="sign py-5 px-8 flex flex-col relative">
-        <div class="flex w-full items-baseline justify-between">
-          <h2 class="text-3xl">Оставьте свои контакты <br>и выберите <span class="italic text-4xl">удобное вам</span> время</h2>
-          <div id="close-sign" class="self-end cursor-pointer relative -top-6 -right-2 w-10 h-8"></div>
-        </div>
-        <form action="#" class="mt-2 flex gap-5">
-          <input class="sign-input p-3 mt-4 border-b border-black w-1/2" type="text" name="name" placeholder="Фамилия">
-          <input class="sign-input p-3 mt-4 border-b border-black w-1/2" type="text" name="name" placeholder="Имя">
-        </form>
-        <form action="#">
-          <input class="sign-input mt-4 p-3 border-b border-black w-full" type="email" name="customer_mail" id="email" placeholder="Email">
-        </form>
-        <form action="#">
-          <input class="sign-input mt-4 p-3 border-b border-black w-full" type="tel" placeholder="Phone:" name="customer_tel" id="phone">
-        </form>
-        <div class="w-full flex items-center ">
-          <button id="signed"
-                  class="w-fit mt-4 uppercase border-2 py-2 px-3 border-black font-normal hover:bg-black hover:text-white"
-                >
-                  записаться
-                </button>
-          <p id="warning" class="hidden text-red-800 pt-3 pl-4">Заполните все поля!</p>
-        </div>
-        
-      </div>
-    </section>
-
+<section class="sign-window hidden h-[105%] w-full justify-center items-center fixed top-0 left-0 dim">
+  </div>
+  <div class="sign w-[600px] h-[400px] py-5 px-8 flex-col relative">
+    <div class="absolute w-10 h-8 ml-4 mt-5 right-0 top-0">
+        <div id="close-sign" class="self-end cursor-pointer relative w-10 h-8"></div>
+    </div>
+    <div class="flex w-full items-baseline justify-between">
+        <h2 class="text-2xl sm:text-3xl">Оставьте свои контакты <br>и выберите <span class="italic text-2xl sm:text-4xl">удобное вам</span> время</h2>
+    </div>
+    <form action="#" class="mt-2 flex gap-5">
+      <input class="sign-input p-3 mt-4 border-b border-black w-1/2" type="text" name="name" placeholder="Фамилия">
+      <input class="sign-input p-3 mt-4 border-b border-black w-1/2" type="text" name="name" placeholder="Имя">
+    </form>
+    <form action="#">
+      <input class="sign-input mt-4 p-3 border-b border-black w-full" type="email" name="customer_mail" id="email" placeholder="Email">
+    </form>
+    <form action="#">
+      <input class="sign-input mt-4 p-3 border-b border-black w-full" type="tel" placeholder="Phone:" name="customer_tel" id="phone">
+    </form>
+    <div class="w-full flex items-center ">
+      <button id="signed" class="w-fit mt-4 uppercase border-2 py-2 px-3 border-black font-normal hover:bg-black hover:text-white">
+        записаться
+      </button>
+      <p id="warning" class="hidden text-red-800 pt-3 pl-4">Заполните все поля!</p>
+      <h1 id="success" class="hidden text-xl pl-4">Ваша заявка успешно отправлена</h1>
+    </div>    
+  </div>
+</section>
+    
     <script src="./apps/app.js"></script>
   </body>
 </html>
